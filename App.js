@@ -17,7 +17,7 @@ const App = () => (
   <NavigationContainer>
       <Drawer.Navigator backBehavior={"history"}  drawerPosition={"left"} drawerType={"slide"} overlayColor={'rgba(0, 0, 0, 0.7)'} screenOptions={{headerStyle:{ borderBottomWidth: 1 } }} >
         <Drawer.Screen name="Home" component={HomeScreen} options={{headerShown: false, drawerPosition: 'left'}}/>
-        <Drawer.Screen name="Autenticacao" component={AutenticacaoScreen} options={{headerShown: false, drawerPosition: 'left'}}/>
+        {/* <Drawer.Screen name="Autenticacao" component={AutenticacaoScreen} options={{headerShown: false, drawerPosition: 'left'}}/> */}
       </Drawer.Navigator>
     </NavigationContainer>
 );

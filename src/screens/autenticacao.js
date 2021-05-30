@@ -13,7 +13,7 @@ import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 
 export default function App() {
   const [image, setImage] = useState();
-  const [result, setResult] = useState({});
+  // const [result, setResult] = useState({});
   const onTakePhoto = () => launchCamera({mediaType: 'image'}, onMediaSelect);
 
   const onSelectImagePress = () =>
@@ -21,7 +21,8 @@ export default function App() {
 
   const onMediaSelect = async (media) => {
     if (!media.didCancel) {
-      setImage(media.uri);
+      setImage(media.assets[0].uri);
+      console.log(image)
       // const result = await vision().cloudDocumentTextRecognizerProcessImage(media.uri)
       //   media.uri, {
       //     languageHints: ["pt"],
@@ -53,7 +54,7 @@ export default function App() {
         />
       </View>
       <View style={{marginTop: 30}}>
-        <Text style={{fontSize: 30}}>{result.text}</Text>
+        {/* <Text style={{fontSize: 30}}>{result.text}</Text> */}
       </View>
     </ScrollView>
   );
